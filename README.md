@@ -17,7 +17,8 @@ A **LangGraph-powered FastAPI** application that autonomously analyzes food wast
   - [Database Setup](#database-setup)
   - [Run the Application](#run-the-application)
 - [API Endpoints](#api-endpoints)
-  - [Category Processing Workflow](#category-processing-workflow)
+  - [Waste Analysis Workflow](#waste-analysis-workflow)
+  - [Chef Feedback Email Delivery](#chef-feedback-email-delivery)
 - [Usage Examples](#usage-examples)
 - [Configuration](#configuration)
 - [Release Notes](#release-notes)
@@ -37,7 +38,6 @@ The **Waste Pattern Detection Agent** is an intelligent food waste intelligence 
 5. **LangGraph Stateful Workflow** – Orchestrates analysis → feedback → DB update in a robust, traceable flow.
 6. **FastAPI Backend** – Clean REST API for on-demand branch-month analysis and email dispatch.
 7. **Real Email Delivery via Gmail SMTP** – Sends personalized feedback emails directly to chefs using secure App Passwords.
-8. **Zero Placeholder Artifacts** – Fully cleaned output with real names, no `[Name]` tags.
 
 ## Architecture
 
@@ -171,7 +171,7 @@ Example Response:
         "Branch Manager": "Robert",
         "Chef": "Chef Maria",
         "Status": "Approved by Manager",
-        "Chef_Feedback": "Team, we need to talk about our milk waste. We had a significant issue on February 17th when we wasted 9 units of high-cost milk, resulting in a loss of $513.00. This is 3 times more than our expected waste of 3 units, which is a huge concern. To put it simply, we're wasting 6 units of milk more than we should be, and that's not sustainable. To avoid this mistake immediately, please make sure to check the 'use by' date on the milk cartons every time you pull stock, so we can minimize waste and stay within our budget."
+        "Chef_Feedback": "Team, we need to talk about our milk waste. We had a significant issue on February 17th....."
     },
     {
         "ID": 105,
@@ -259,4 +259,3 @@ Example Response:
 - Automated MySQL updates with Chef_Feedback and Chef_Feedback_Subject
 - Real Gmail SMTP delivery to chefs
 - Clean FastAPI + LangGraph architecture
-- Zero placeholder text in final emails
