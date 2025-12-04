@@ -255,7 +255,7 @@ Example Response:
 #### v1.0.0
 
 - Full waste pattern detection with root cause analysis
-- LLM-generated chef feedback (body + subject)
-- Automated MySQL updates with Chef_Feedback and Chef_Feedback_Subject
+- LLM-generated chef feedback (body)
+- Automated MySQL updates with Chef_Feedback
 - Real Gmail SMTP delivery to chefs
 - Clean FastAPI + LangGraph architecture
