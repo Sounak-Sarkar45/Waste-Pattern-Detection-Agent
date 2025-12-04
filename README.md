@@ -134,7 +134,7 @@ Branch,
 Branch Manager,
 Chef,
 Status,
-Chef_Feedback (TEXT),
+Chef_Feedback (TEXT)
 ```
 
 ### Run the Application
@@ -143,6 +143,7 @@ Chef_Feedback (TEXT),
 uvicorn main:app --reload
 ```
 Access API at: http://127.0.0.1:8000/
+
 Interactive docs: http://127.0.0.1:8000/docs
 
 ### API Endpoints
